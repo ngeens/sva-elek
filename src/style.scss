@@ -1,0 +1,65 @@
+/* import assets */
+@import "bourbon";
+@import "neat";
+@import "https://file.myfontastic.com/xJEm6zVXquoZdFLtN8ZRSM/icons.css";
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+
+/* some sane variables */
+$primary-color: white;
+$secondary-color: #435B98;
+$base-font: "PT Sans", sans-serif;
+$icon-font: "sva-algemene-elektriciteitswerken";
+
+/* custom css */
+html, body {
+  background-color: $secondary-color;
+  color: $primary-color;
+  font-family: $base-font;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  section {
+    @include outer-container;
+    flex: 1;
+    div.logo {
+      @include span-columns(4);
+      font-family: $icon-font;
+      font-size: rem(96);
+      text-align: right;
+      }
+    div.info {
+      @include span-columns(8);
+      }
+  }  
+}
+
+.info--name {
+  font-size: rem(60);
+  font-weight: bold;
+}
+
+.info--service {
+  font-size: rem(36);
+}
+
+.info--data {
+  font-size: rem(18);
+  margin-top: rem(10);
+}
+
+/* Internet Explorer 10+ */
+/* Disable flex for IE10 and up */
+_:-ms-lang(x), .ie10up { 
+  display: block; 
+  margin-top: 5%;
+}
