@@ -1,6 +1,15 @@
 /* import assets */
+
+/* original import from fontastic */
 @import "https://file.myfontastic.com/xJEm6zVXquoZdFLtN8ZRSM/icons.css";
+
+/* to be replaced by local version below to avoid dependency */
+@import "icons.css";
+
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700");
+
+/* actual styles */
+
 html {
   box-sizing: border-box;
 }
